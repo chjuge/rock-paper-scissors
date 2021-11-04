@@ -15,10 +15,10 @@ function playRound(playerSelection, computerSelection) {
         case "scissors": switch (playerSelection) {
             case "scissors":
                 console.log(TIE + `Both players selection is ${playerSelection}`);
-                return 0.5;
+                return 0;
             case "paper":
                 console.log(LOSE + `${computerSelection} beats ${playerSelection}`);
-                return 0;
+                return -1;
             case "rock":
                 console.log(WIN + `${playerSelection} beats ${computerSelection}`);
                 return 1;
@@ -28,10 +28,10 @@ function playRound(playerSelection, computerSelection) {
         case "paper": switch (playerSelection) {
             case "paper":
                 console.log(TIE + `Both players selection is ${playerSelection}`);
-                return 0.5;
+                return 0;
             case "rock":
                 console.log(LOSE + `${computerSelection} beats ${playerSelection}`);
-                return 0;
+                return -1;
             case "scissors":
                 console.log(WIN + `${playerSelection} beats ${computerSelection}`);
                 return 1;
@@ -41,10 +41,10 @@ function playRound(playerSelection, computerSelection) {
         case "rock": switch (playerSelection) {
             case "rock":
                 console.log(TIE + `Both players selection is ${playerSelection}`);
-                return 0.5;
+                return 0;
             case "scissors":
                 console.log(LOSE + `${computerSelection} beats ${playerSelection}`);
-                return 0;
+                return -1;
             case "paper":
                 console.log(WIN + `${playerSelection} beats ${computerSelection}`);
                 return 1;
@@ -56,13 +56,18 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game(rounds = 5) {
-    let score = 0;
-    for (i = 0; i < rounds; i++) {
+    let score_human = 0;
+    let score_bot = 0;
+    for (i = 0; i < rounds;) {
         let bot = computerPlay();
         let human = prompt();
-        score += playRound(human, bot);
+        let res = playRound(human, bot);
+        if (res == 0)
+            continue;
+        res > 0 ? score_human++ : score_bot++;
+        i++;
     }
-    console.log(`${score > rounds / 2 ? "You Win!" : score == rounds / 2 ? "Tie!" : "You loose!"} Your final ${rounds} rounds score is ${score}`);
+    console.log(`${score_human > score_bot ? "You Win!" : "You loose!"} Your final ${rounds} rounds score is ${score_human}`);
 }
 
 game();

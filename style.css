@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+* {
+    font-weight: inherit;
+    font-family: inherit;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-style: inherit;
+    font-size: 100%;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+:focus {
+    outline: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.header,
+.footer {
+    background-color: #4B6368;
+    padding: 1em 0;
+}
+
+.body {
+    background-color: #1D1C1C;
+    display: flex;
+    flex-direction: column;
+    color: rgb(225, 226, 225);
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 35px 0 50px 0;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+.main-header {
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.make-choice,
+.round-result {
+    font-size: 30px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 0 5em;
+}
+
+.button,
+.icon-holder {
+    background-color: #BFBBAF;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 20px;
+}
+
+.img {
+    max-width: 150px;
+}
+
+.round-result,
+.players-score {
+    display: flex;
+    background-color: #1D1C1C;
+    border: none;
+    align-items: stretch;
+}
+
+.round-result {
+    width: 800px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.score__header {
+    font-weight: bold;
+}
+
+.player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    gap: 30px;
+}
+
+.number-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.players-score {
+    width: 50px;
+}
+
+.player-computer,
+.player-human {
+    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+.play-again {
+    min-width: 450px;
+    min-height: 100px;
+}

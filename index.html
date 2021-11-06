@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock paper scissors</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+
+<body class="body">
+    <div class="header">
+        That time has come! Play the <strong>GAME</strong>!
+    </div>
+    <div class="content">
+        <h1 class="main-header">Rock! Paper! Scissors!</h1>
+        <h2 class="make-choice">Make a choice, determine your destiny:</h2>
+        <div class="buttons-container">
+            <button type="button" class="button buttons-container__button">
+                <img class="img" src="./src/images/stone-rock-svgrepo-com.svg" alt="Rock-icon"> Rock</button>
+            <button type="button" class="button buttons-container__button">
+                <img class="img" src="./src/images/paper-svgrepo-com.svg" alt="Paper-icon">
+                Paper</button>
+            <button type="button" class="button buttons-container__button">
+                <img class="img" src="./src/images/scissors-svgrepo-com.svg" alt="Scissors-icon">
+                Scissors</button>
+        </div>
+        <input type="text" readonly="true" class="round-result hidden" value="" />
+        <div class="game-result">
+            <div class="icon-holder icon-holder-win hidden">
+                <img class="img win" src="./src/images/thumbs-up-svgrepo-com.svg" alt="thumb up">
+            </div>
+            <div class="icon-holder icon-holder-lose hidden">
+                <img class="img lose" src="./src/images/thumb-down-svgrepo-com.svg" alt="thumb down">
+            </div>
+        </div>
+        <div class="score hidden">
+            <h2 class="score__header">Score:</h2>
+            <div class="score-container">
+                <div class="player player-computer">You</div>
+                <div class="number-container">
+                    <input type="text" readonly="true" class="players-score your-score" value="0" />
+                    <input type="text" readonly="true" class="players-score opps-score" value="0" />
+                </div>
+                <div class="player player-human">Computer</div>
+            </div>
+        </div>
+        <button type="button" class="play-again button hidden">Play again</button>
+    </div>
+    <div class="footer"><strong>Chjuge</strong> for <strong>The Odin Project</strong> 2021</div>
+    <script src="script.js" refer></script>
 </body>
+
 </html>
